@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            //画像アップロード保存のカラム
+            $table->string('avatar_file_name')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
