@@ -21,6 +21,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//sell
+Route::middleware('auth')->group(function(){
+    Route::get('sell','SellController@showSellForm')->name('sell');
+});
+
 //mypage
 Route::prefix('mypage')
     ->namespace('Mypage')
