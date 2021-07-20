@@ -11,6 +11,9 @@ class Item extends Model
     //購入済
     const STATE_BOUGHT = 'bought';
 
+    protected $casts = [
+        'bought_at' => 'datetime',
+    ];
     //商品に紐づく小カテゴリを取得
     public function secondaryCategory()
     {
